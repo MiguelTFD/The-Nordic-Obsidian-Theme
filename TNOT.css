@@ -1,0 +1,537 @@
+/*The-Nordic-obsidian-theme by MiguelTFD V 1.0.0 */
+
+/*The-Nordic-obsidian-theme is a custom edit of the Theme PLN:https://github.com/PipeItToDevNull/PLN*/
+
+
+body {
+  /* Accent HSL values */
+  --accent-h: 193;
+  --accent-s: 43%;
+  --accent-l: 67%;
+
+  --inline-title-color: var(--color-base-50); /*Title color*/
+  /* Backgrounds */
+  --background-primary: var(--b0);
+  --background-secondary: var(--b0);
+  --background-modifier-hover: var(--b3);
+  
+
+  /* Links */
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+  /* Blockquotes */
+  --blockquote-border-thickness: 4px !important;
+  --blockquote-border-color: var(--color-frost);
+  --blockquote-background-color: var(--background-primary-alt);
+
+  /* Code */
+  --code-background: var(--b1);
+  --code-normal: var(--color-sea-green);
+  --code-comment: #abb9cf;
+  --code-function: var(--color-cyan);
+  --code-important: var(--color-orange);
+  --code-keyword: var(--color-frost);
+  --code-operator: var(--color-frost);
+  --code-property: var(--w0);
+  --code-string: var(--color-green);
+  --code-tag: var(--color-red);
+  --code-value: var(--color-purple);
+
+  /*footnote*/
+  --footnote-size: var(--font-smallest);
+
+  /* Tables */
+  /*Header y fondo*/
+  --table-border-color: none;
+  --table-background: transparent;
+  --table-border-width: 0;
+  --table-white-space: normal;
+  --table-header-background: var(--background-secondary);
+  --table-header-background-hover: var(--background-secondary);
+
+  /*Contenido de la tabla*/
+  --table-column-max-width: none;
+  --table-column-alt-background: var(--table-background);
+  --table-column-first-border-width: var(--table-border-width);
+  --table-column-last-border-width: var(--table-border-width);
+  --table-row-background-hover: var(--background-primary-alt);
+  --table-row-alt-background: var(--table-background);
+  --table-row-last-border-width: var(--table-border-width);
+
+  /* Checkboxes */
+  --checkbox-radius: 6px;
+  --checkbox-marker-color: var(--w2); /*Color de la flecha*/
+  --checkbox-color: var(--background-primary-alt);
+  --checkbox-color-hover: var(--background-primary-alt);
+  --checklist-done-decoration: none;
+  --checklist-done-color: var(--w2); /*Color del texto*/
+
+  /* Tags */
+  --tag-color: var(--color-base-100);
+  --tag-color-hover: var(--background-primary);
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-background: var(--background-primary-alt);
+  --tag-background-hover: var(--color-cyan);
+  --tag-border-color: var(--background-primary-alt);
+  --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
+  --tag-border-width: 1px;
+  --text-selection: var(--background-primary-alt) !important;
+
+
+  /*h1 
+  --h1-color: var(--color-frost);
+  --h2-color: var(--color-green);
+*/
+}
+
+.theme-dark {
+  --color-red: #bf616a;
+  --color-orange: #d08770;
+  --color-yellow: #ebcb8b;
+  --color-green: #a3be8c;
+  --color-purple: #b48ead;
+  --color-sea-green: #8fbcbb;
+  --color-cyan: #88c0d0;
+  --color-frost: #81a1c1;
+  --color-blue: #5e81ac;
+
+  --b0: #2e3440; /*1*/
+  --b1: #3b4252; /*2*/
+  --b2: #434c5e; /*3*/
+  --b3: #4c566a; /*comentarios*/
+
+  --w0: #eceff4; /*1*/
+  --w1: #e5e9f0; /*2*/
+  --w2: #d8dee9; /*3*/ /*Usado para el texto*/
+
+  --text-highlight-bg: var(--background-primary-alt);
+  --text-highlight-bg-active: var(--background-primary-alt);
+
+
+  /*---Backgrounds*/
+
+  --background-primary: var(--b0); /* background color of notes */
+  --background-primary-alt: var(--b1); /* Background of code blocks */
+  --background-secondary: var(--b1); /* blurred nav bar */
+  --background-secondary-alt: var(--b2); /* focused nav bar */
+  --background-modifier-border: var(--b2); /* lines between objects/Borders */
+
+
+  /* lines in the ui */ 
+  --color-base-00: var(--b0);
+  --color-base-10: var(--b0);
+  --color-base-20: var(--b0);
+  --color-base-25: var(--b0);
+  --color-base-30: var(--b1);
+
+  /* toggle background */
+
+  /* small line in tabs*/
+  --color-base-35: var(--b3);
+  /* window outlines */
+  --color-base-40: var(--b0);
+  /* bullets */
+  --color-base-50: var(--w0);
+  --color-base-60: var(--w1);
+  --color-base-70: var(--w2);
+  /* main font */
+  --color-base-100: var(--w2);
+  --bold-weight: var(--font-bold);
+}
+
+/*Callouts*/
+body {
+  --callout-padding: 0;
+  --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2)
+    var(--size-4-3);
+  --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
+  --callout-radius: 5px;
+}
+
+/* remove leading and trailing padding of callout content paragraphs */
+.callout-content > p:first-child {
+  margin-top: 0px;
+}
+.callout-content > p:last-child {
+  margin-bottom: 0px;
+}
+
+.callout {
+  border-top: 4px solid rgba(var(--callout-color), 1);
+  border-left: 2px solid rgba(var(--callout-color), 1);
+}
+
+/* make quotes look like callouts too */
+body {
+  --blockquote-border-thickness: 2px;
+}
+/* correct quote padding */
+div.HyperMD-quote.HyperMD-quote-1.cm-line {
+  padding-inline-start: var(--size-4-3) !important;
+}
+.markdown-rendered blockquote {
+  padding: 0 0 0 var(--size-4-3);
+}
+
+/* make unique callouts */
+.callout[data-callout="danger"] {
+  --callout-icon: lucide-alert-octagon;
+  --callout-color: 252, 110, 104;
+}
+.callout[data-callout="idea"] {
+  --callout-icon: lucide-lightbulb;
+}
+.callout[data-callout="links"] {
+  --callout-icon: lucide-link;
+}
+.callout[data-callout="meta"] {
+  --callout-icon: lucide-database;
+}
+
+/* colours */
+.callout[data-callout="note"] {
+  --callout-color: 94, 129, 172;
+}
+
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  --callout-color: 129, 161, 193;
+}
+
+.callout[data-callout="info"],
+.callout[data-callout="todo"],
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+  --callout-color: 136, 192, 208;
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"],
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"] {
+  --callout-color: 163, 190, 140;
+}
+
+.theme-light .callout[data-callout="idea"],
+.theme-light .callout[data-callout="attention"],
+.theme-light .callout[data-callout="caution"],
+.theme-light .callout[data-callout="warning"] {
+  --callout-color: 228, 184, 140;
+}
+
+.theme-dark .callout[data-callout="idea"],
+.theme-dark .callout[data-callout="attention"],
+.theme-dark .callout[data-callout="caution"],
+.theme-dark .callout[data-callout="warning"] {
+  --callout-color: 235, 203, 139;
+}
+
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"] {
+  --callout-color: 208, 135, 112;
+}
+
+.callout[data-callout="error"],
+.callout[data-callout="bug"] {
+  --callout-color: 191, 97, 106;
+}
+
+.callout[data-callout="example"] {
+  --callout-color: 180, 142, 173;
+}
+
+.theme-dark .callout[data-callout="cite"],
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="links"],
+.theme-dark .callout[data-callout="meta"] {
+  --callout-color: 216, 222, 233;
+}
+.theme-light .callout[data-callout="cite"],
+.theme-light .callout[data-callout="quote"],
+.theme-light .callout[data-callout="links"],
+.theme-light .callout[data-callout="meta"] {
+  --callout-color: 76, 86, 106;
+}
+
+/*---Highlighters* Original by soggymuse, modified by Pipe---*/
+/* removes the default css */
+  mark,
+  .markdown-rendered mark,
+  .cm-s-obsidian span.cm-highlight {
+    color: inherit;
+    background: none;
+    border-radius: 4px;
+    border-bottom: 3px solid;
+    border-bottom-color: var(--color-yellow);
+  }
+  
+  /*Add highlighter's label before highlighted text*/
+  mark::before,
+  .cm-s-obsidian span.cm-highlight::before {
+    padding: 0 5px;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: Palatino;
+  }
+  
+  /*Red highlighter (edit)*/
+  mark.edit {
+    border-bottom-color: var(--color-red);
+  }
+  mark.edit::before {
+    color: var(--color-red);
+    content: "Edit:";
+  }
+  
+  /*Orange highlighter (unfinished)*/
+  mark.unfinished {
+    border-bottom-color: var(--color-orange);
+  }
+  mark.unfinished::before {
+    color: var(--color-orange);
+    content: "Unfinished:";
+  }
+  
+  /*Pink highlighter (verify)*/
+  mark.verify {
+    border-bottom-color: var(--color-purple);
+  }
+  mark.verify::before {
+    color: var(--color-purple);
+    content: "Verify:";
+  }
+  
+  /* Green highlighter (important)*/
+  mark.important {
+    border-bottom-color: var(--color-green);
+  }
+  mark.important::before {
+    color: var(--color-green);
+    content: "Important:";
+  }
+  
+  /*
+   * Text colours using mark
+  */
+  mark.red {
+    color: var(--color-red);
+    border-bottom: 0px;
+  }
+  mark.orange {
+    color: var(--color-orange);
+    border-bottom: 0px;
+  }
+  mark.yellow {
+    color: var(--color-yellow);
+    border-bottom: 0px;
+  }
+  mark.green {
+    color: var(--color-green);
+    border-bottom: 0px;
+  }
+  mark.purple {
+    color: var(--color-purple);
+    border-bottom: 0px;
+  }
+  mark.sea-green {
+    color: var(--color-sea-green);
+    border-bottom: 0px;
+  }
+  mark.cyan {
+    color: var(--color-cyan);
+    border-bottom: 0px;
+  }
+  mark.frost {
+    color: var(--color-frost);
+    border-bottom: 0px;
+  }
+  mark.blue {
+    color: var(--color-blue);
+    border-bottom: 0px;
+  }
+
+  /*underlined text*/
+  mark.underline {
+    text-decoration: underline;
+    border-bottom: 0px;
+  }
+  /* paths */
+  mark.path {
+    font-family: monospace;
+    color: var(--text-faint);
+    border-bottom: 0px;
+  }
+  /* borders */
+  mark.borders {
+    border: 1px solid;
+    border-radius: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  /* spoiler */
+  mark.spoiler {
+    border-bottom: 0px;
+    background-color: var(--text-normal);
+  }
+  mark.spoiler:hover {
+    background-color: inherit;
+  }
+
+/*Folders*/
+.tree-item-children {
+  --nav-indentation-guide-width: 3px;
+  border-bottom-left-radius: 5px;
+}
+.mod-root .nav-folder svg.svg-icon {
+  color: var(--w2) !important;
+}
+.mod-root > .nav-folder-children > .nav-folder .tree-item-children {
+  --nav-indentation-guide-color: var(--w2);
+}
+
+
+/*table-max-width*/
+.markdown-source-view.mod-cm6 .cm-table-widget table,
+.markdown-rendered table {
+  width: 100%;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget table thead tr,
+.markdown-rendered table thead tr {
+  border-bottom: 3px solid var(--b3);
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget table tbody tr,
+.markdown-rendered table tbody tr {
+  border-top: 1px solid var(--b1);
+}
+ 
+  /*Footnotes*/
+  .footnotes{
+    color: var(--b3);
+  }
+  .footnote-link {
+    text-decoration: none;
+    color: var(--color-purple);
+  }
+  .footnote-link:hover {
+    text-decoration: none;
+    color: var(--color-purple);
+    background-color: #3b4252;
+    border-radius: 0.25em;
+  }
+  
+  .cm-line.HyperMD-footnote span.cm-hmd-footnote .cm-underline {
+    color: var(--color-purple);
+  }
+  
+  .cm-line.HyperMD-footnote span.cm-hmd-footnote .cm-underline:hover {
+    color: var(--color-purple);
+  }
+  
+  /*Extra-settings*/
+/* Change the color of the list enumeration */
+.footnotes ol > li::marker, ul > li::marker {
+    color: var(--b3);
+}
+
+/* Title of the notes */
+.inline-title {
+  text-align: center;
+  padding-bottom: 9px;
+  margin-bottom: 60px;
+}
+
+/* Hide the directory bar 400/normbreDir/nombreNota */
+.view-header-title-container.mod-at-start {
+  display: none;
+}
+
+/* Centered Images */
+.markdown-preview-view img,
+.markdown-source-view img {
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto; /* This centers the image horizontally */
+  transition: transform 0.3s; /* Add a smooth transition to animate the change */
+}
+
+
+
+.markdown-preview-view img:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/*Video Embebed Settings*/
+/* Styled video in markdown preview */
+.markdown-preview-view video,
+.markdown-source-view video {
+  border-radius: 12px;
+  display: block; /* This makes the video a block element */
+  margin: 0 auto; /* This centers the video horizontally */
+  transition: transform 0.3s; /* Add a smooth transition to animate the change */
+}
+
+.markdown-preview-view video:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/*Blockquoates*/
+.markdown-preview-view blockquote,
+.markdown-source-view blockquote{
+  border-radius: var(--radius-s);
+}
+.markdown-preview-view .callout,
+.markdown-source-view .callout{
+  font-size: var(--font-smallest);
+
+}
+
+/*white underline h1*/
+h1, .markdown-rendered h1 {
+border-bottom: var(--b2) 2px solid;
+margin-top: 60px;
+
+}
+
+/*text Bold color*/
+strong, span.cm-strong {
+  color: var(--color-frost);
+}
+
+/*italic text color*/
+em,span.cm-em {
+  color: #a3be8c;
+}
+/*strikethrough text color*/
+del,.cm-del {
+  color: var(--b3);
+}
+
+/*footnotes b/em*/
+.footnotes,
+.footnotes strong,
+.cm-strong {
+  color: var(--b3);
+}
+
+.footnotes,
+.footnotes em,
+.cm-em {
+  color: var(--b3);
+}
+
+.markdown-rendered pre code{
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+}
+h2, .markdown-rendered h2 {
+margin-top: 60px;
+}
